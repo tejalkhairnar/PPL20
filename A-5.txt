@@ -1,0 +1,31 @@
+int main()                                   |main ()
+{                                            |{
+    int a, b, c, d, n;                       |  int n;
+                                             |  int d;
+                                             |  int c;
+                                             |  int b;
+                                             |  int a;
+                                             |
+                                             |<bb 2>:
+    d = 10;                                  |  d_3 = 10;
+    if (c > d) {                             |  if (c_4(D) > d_3)
+        a = 2;                               |    goto <bb 3>;
+        b = 2;                               |  else
+    } else {                                 |    goto <bb 4>;
+        a = 2;                               |
+        b = 3;                               |<bb 3>:
+    }                                        |  a_5 = 2;
+                                             |  b_6 = 2;
+                                             |  goto <bb 5>;
+                                             |
+                                             |<bb 4>:
+                                             |  a_7 = 2;
+                                             |  b_8 = 3;
+                                             |
+                                             |<bb 5>:
+                                             |  # a_1 = PHI <a_5(3), a_7(4)>
+                                             |  # b_2 = PHI <b_6(3), b_8(4)>
+    c = a + b;                               |  c_9 = a_1 + b_2;
+                                             |  return;
+                                             |
+}                                            |}
